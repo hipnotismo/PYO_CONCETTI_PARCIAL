@@ -1,33 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
     [Header("Text")]
-    [SerializeField] TMP_Text instructionText;
-    [SerializeField] TMP_Text scoreText;
-    [SerializeField] TMP_Text timerText;
+    [SerializeField] private TMP_Text instructionText;
+    [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private TMP_Text timerText;
 
     [Header("Buttons")]
-    [SerializeField] GameObject addButton;
-    [SerializeField] GameObject creditButton;
+    [SerializeField] private GameObject mainButton;
+    [SerializeField] private GameObject addButton;
+    [SerializeField] private GameObject creditButton;
 
     [Header("Canvases")]
-    [SerializeField] GameObject addCanvas;
-    [SerializeField] GameObject creditCanvas;
+    [SerializeField] private GameObject addCanvas;
+    [SerializeField] private GameObject creditCanvas;
 
+    public TMP_Text TimerText ;
 
-    void Start()
+    void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
+        TimerText = timerText;
     }
 
     public void ShowInstructions(bool state)
@@ -61,5 +55,10 @@ public class UIManager : MonoBehaviour
         {
             canvas.SetActive(true);
         }
+    }
+
+    public void EnableMainButton(bool state)
+    {
+        mainButton.SetActive(state);
     }
 }
