@@ -6,6 +6,7 @@ public class UIManager : MonoBehaviour
     [Header("Text")]
     [SerializeField] private TMP_Text instructionText;
     [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private TMP_Text highScoreText;
     [SerializeField] private TMP_Text timerText;
 
     [Header("Buttons")]
@@ -17,11 +18,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject addCanvas;
     [SerializeField] private GameObject creditCanvas;
 
-    public TMP_Text TimerText ;
+    public TMP_Text TimerText;
+    public TMP_Text ScoreText;
 
     void Awake()
     {
         TimerText = timerText;
+        ScoreText = scoreText;
     }
 
     public void ShowInstructions(bool state)

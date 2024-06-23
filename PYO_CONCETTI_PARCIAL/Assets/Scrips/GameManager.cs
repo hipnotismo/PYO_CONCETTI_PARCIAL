@@ -12,8 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] UIManager uiManager;
 
     [SerializeField] Timer timer;
-
-    public int temp = 0;
+    [SerializeField] Clicks clicks;
 
     public bool gameplayStar;
 
@@ -21,23 +20,26 @@ public class GameManager : MonoBehaviour
     {
         timer.onEnd += OnEndTime;
     }
+
+    private void OnDisable()
+    {
+        timer.onEnd -= OnEndTime;
+    }
     void Start()
     {
-        // timer = new Timer(uiManager.TimerText, baseCountdownTime);
-        timer.GetStuff(uiManager.TimerText, baseCountdownTime);
+        clicks.GetParameters(uiManager.ScoreText);
+        timer.GetParameters(uiManager.TimerText, baseCountdownTime);
         gameplayStar = false;
     }
     
     public void OnClick() {
-        temp++;
-        Debug.Log(temp);
 
-
+        clicks.OnClick();
         if (gameplayStar) return;
         
-            uiManager.ShowInstructions(false);
-            timer.TimeStart();
-            gameplayStar = true;
+        uiManager.ShowInstructions(false);
+        timer.TimeStart();
+        gameplayStar = true;
 
 
     }
@@ -61,6 +63,7 @@ public class GameManager : MonoBehaviour
 
         uiManager.ShowInstructions(true);
         uiManager.EnableMainButton(true);
+        clicks.ResetClicks();
 
         timer.ResetTimer();
 

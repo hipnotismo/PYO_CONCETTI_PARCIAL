@@ -2365,6 +2365,7 @@ GameObject:
   - component: {fileID: 1575718428}
   - component: {fileID: 1575718429}
   - component: {fileID: 1575718430}
+  - component: {fileID: 1575718431}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -2403,7 +2404,7 @@ MonoBehaviour:
   waitToRestart: 2
   uiManager: {fileID: 1575718429}
   timer: {fileID: 1575718430}
-  temp: 0
+  clicks: {fileID: 1575718431}
   gameplayStar: 0
 --- !u!114 &1575718429
 MonoBehaviour:
@@ -2418,7 +2419,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instructionText: {fileID: 1075058562}
-  scoreText: {fileID: 1507584472}
+  scoreText: {fileID: 1635577310}
+  highScoreText: {fileID: 1507584472}
   timerText: {fileID: 1842328891}
   mainButton: {fileID: 1455261020}
   addButton: {fileID: 608210952}
@@ -2426,6 +2428,7 @@ MonoBehaviour:
   addCanvas: {fileID: 0}
   creditCanvas: {fileID: 1860928746}
   TimerText: {fileID: 0}
+  ScoreText: {fileID: 0}
 --- !u!114 &1575718430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2436,6 +2439,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75055fcdbb6d33d438c26f0233791583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1575718431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575718426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191b06872a663094e985e17434728a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1635577308
@@ -2450,7 +2465,7 @@ GameObject:
   - component: {fileID: 1635577311}
   - component: {fileID: 1635577310}
   m_Layer: 0
-  m_Name: Click Text
+  m_Name: Score Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2495,7 +2510,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Clicks: 0'
+  m_text: 00 clicks
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

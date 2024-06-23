@@ -11,7 +11,7 @@ public class Timer : MonoBehaviour
 
     public event Action onEnd = delegate { };
 
-    public void GetStuff(TMP_Text _timerText, float _baseCountdown)
+    public void GetParameters(TMP_Text _timerText, float _baseCountdown)
     {
         timerText = _timerText;
         baseCountdown = _baseCountdown;
