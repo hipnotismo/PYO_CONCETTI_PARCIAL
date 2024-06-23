@@ -2366,6 +2366,7 @@ GameObject:
   - component: {fileID: 1575718429}
   - component: {fileID: 1575718430}
   - component: {fileID: 1575718431}
+  - component: {fileID: 1575718432}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -2400,11 +2401,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d995d5664e36dd2478a7e4cb1f817c44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseCountdownTime: 3
+  baseCountdownTime: 10
   waitToRestart: 2
   uiManager: {fileID: 1575718429}
   timer: {fileID: 1575718430}
   clicks: {fileID: 1575718431}
+  highScore: {fileID: 1575718432}
   gameplayStar: 0
 --- !u!114 &1575718429
 MonoBehaviour:
@@ -2429,6 +2431,7 @@ MonoBehaviour:
   creditCanvas: {fileID: 1860928746}
   TimerText: {fileID: 0}
   ScoreText: {fileID: 0}
+  HighScoreText: {fileID: 0}
 --- !u!114 &1575718430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2451,6 +2454,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 191b06872a663094e985e17434728a9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1575718432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575718426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5a6c741aec7244f868c1b5bee7e83e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1635577308

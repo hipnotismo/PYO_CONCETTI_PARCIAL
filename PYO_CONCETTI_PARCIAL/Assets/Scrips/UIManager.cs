@@ -20,11 +20,13 @@ public class UIManager : MonoBehaviour
 
     public TMP_Text TimerText;
     public TMP_Text ScoreText;
+    public TMP_Text HighScoreText;
 
     void Awake()
     {
         TimerText = timerText;
         ScoreText = scoreText;
+        HighScoreText = highScoreText;
     }
 
     public void ShowInstructions(bool state)

@@ -16,6 +16,7 @@ public class Timer : MonoBehaviour
         timerText = _timerText;
         baseCountdown = _baseCountdown;
         countdown = baseCountdown;
+        UpdateTimerText(baseCountdown);
     }
     public void TimeStart()
     {

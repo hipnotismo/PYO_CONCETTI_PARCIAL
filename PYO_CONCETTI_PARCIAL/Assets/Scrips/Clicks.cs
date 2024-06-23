@@ -30,4 +30,8 @@ public class Clicks : MonoBehaviour
         clickCounterText.text = $"{scoreCounter:D2} taps";;
 #endif
     }
+    public int GetScoreCount()
+    {
+        return scoreCounter;
+    }
 }

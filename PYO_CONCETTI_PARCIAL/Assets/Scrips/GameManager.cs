@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] Timer timer;
     [SerializeField] Clicks clicks;
-
+    [SerializeField] HighScore highScore;
     public bool gameplayStar;
 
     private void OnEnable()
@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     {
         clicks.GetParameters(uiManager.ScoreText);
         timer.GetParameters(uiManager.TimerText, baseCountdownTime);
+        highScore.GetParameters(uiManager.HighScoreText);
         gameplayStar = false;
     }
     
@@ -47,6 +48,7 @@ public class GameManager : MonoBehaviour
     public void OnEndTime()
     {
         uiManager.EnableMainButton(false);
+        CheckIfHighScore();
         StartCoroutine(DelayRestart());
 
     }
@@ -55,6 +57,11 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(waitToRestart);
         ResetGame();
+    }
+
+    private void CheckIfHighScore()
+    {
+        highScore.IsHighScore(clicks.GetScoreCount());
     }
 
     private void ResetGame()
