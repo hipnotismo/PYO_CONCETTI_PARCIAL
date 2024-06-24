@@ -385,8 +385,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Juego Desarrollado por Mart\xEDn Concetti\n para la materia portabilidad
-    y optimisaci\xF3n 1A2C \nImage Campus"
+  m_text: "Game Developed by Mart\xEDn Concetti\n for portability and optimization
+    1A2C\nImage Campus"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1328,7 +1328,7 @@ GameObject:
   - component: {fileID: 478691092}
   - component: {fileID: 478691091}
   m_Layer: 0
-  m_Name: Adds
+  m_Name: Ads
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1788,7 +1788,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1575718429}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: OnOpenAndCloseAds
+        m_MethodName: ShowAds
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1575718428}
@@ -2696,11 +2696,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1575718429}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: CloseAndOpenCanvas
+        m_MethodName: ShowCredits
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1860928746}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 1575718428}
+          m_ObjectArgumentAssemblyTypeName: GameManager, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3402,7 +3402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d995d5664e36dd2478a7e4cb1f817c44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseCountdownTime: 3
+  baseCountdownTime: 10
   waitToRestart: 2
   uiManager: {fileID: 1575718429}
   timer: {fileID: 1575718430}
@@ -3426,9 +3426,9 @@ MonoBehaviour:
   highScoreText: {fileID: 1507584472}
   timerText: {fileID: 1842328891}
   mainButton: {fileID: 1455261020}
-  addButton: {fileID: 608210952}
+  adButton: {fileID: 608210952}
   creditButton: {fileID: 1187747521}
-  addCanvas: {fileID: 478691089}
+  adCanvas: {fileID: 478691089}
   creditCanvas: {fileID: 1860928746}
   TimerText: {fileID: 0}
   ScoreText: {fileID: 0}
@@ -4207,7 +4207,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1860928747
 RectTransform:
   m_ObjectHideFlags: 0

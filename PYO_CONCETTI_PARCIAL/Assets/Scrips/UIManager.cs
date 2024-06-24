@@ -11,11 +11,11 @@ public class UIManager : MonoBehaviour
 
     [Header("Buttons")]
     [SerializeField] private GameObject mainButton;
-    [SerializeField] private GameObject addButton;
+    [SerializeField] private GameObject adButton;
     [SerializeField] private GameObject creditButton;
 
     [Header("Canvases")]
-    [SerializeField] private GameObject addCanvas;
+    [SerializeField] private GameObject adCanvas;
     [SerializeField] private GameObject creditCanvas;
 
     public TMP_Text TimerText;
@@ -29,6 +29,12 @@ public class UIManager : MonoBehaviour
         TimerText = timerText;
         ScoreText = scoreText;
         HighScoreText = highScoreText;
+        adButton.SetActive(false);
+#if UNITY_ANDROID
+        adButton.SetActive(true);
+       
+#endif
+
     }
 
     public void ShowInstructions(bool state)
@@ -44,11 +50,11 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void ShowRewards(GameManager gameManager)
+    public void ShowAds(GameManager gameManager)
     {
         if(gameManager.gameplayStar == false)
         {
-            CloseAndOpenCanvas(addCanvas);
+            CloseAndOpenCanvas(adCanvas);
         }
     }
 
@@ -73,7 +79,7 @@ public class UIManager : MonoBehaviour
     {
         if (gameManager.gameplayStar || hasWatchedAd) return;
 
-        CloseAndOpenCanvas(addCanvas);
+        CloseAndOpenCanvas(adCanvas);
     }
 
     public void OnChooseToWatchAd()
