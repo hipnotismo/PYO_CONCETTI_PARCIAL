@@ -27,7 +27,7 @@ public class Clicks : MonoBehaviour
     {
         scoreText.text = $"{scoreCounter:D2} clicks";
 #if UNITY_ANDROID
-        clickCounterText.text = $"{scoreCounter:D2} taps";;
+        scoreText.text = $"{scoreCounter:D2} taps";;
 #endif
     }
     public int GetScoreCount()

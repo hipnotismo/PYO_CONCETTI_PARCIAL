@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] Clicks clicks;
     [SerializeField] HighScore highScore;
     public bool gameplayStar;
+
+    public event Action OnShowAd;
 
     private void OnEnable()
     {
@@ -61,7 +63,9 @@ public class GameManager : MonoBehaviour
 
     private void CheckIfHighScore()
     {
-        highScore.IsHighScore(clicks.GetScoreCount());
+        if (!highScore.IsHighScore(clicks.GetScoreCount())) OnShowAd?.Invoke();
+
+
     }
 
     private void ResetGame()
@@ -72,8 +76,13 @@ public class GameManager : MonoBehaviour
         uiManager.EnableMainButton(true);
         clicks.ResetClicks();
 
+        uiManager.ResetAdsCanvas();
         timer.ResetTimer();
 
     }
 
+    public void ExtraSeconds(float Seconds)
+    {
+        timer.AddSeconds(Seconds);
+    }
 }

@@ -22,6 +22,8 @@ public class UIManager : MonoBehaviour
     public TMP_Text ScoreText;
     public TMP_Text HighScoreText;
 
+    private bool hasWatchedAd = false;
+
     void Awake()
     {
         TimerText = timerText;
@@ -65,5 +67,22 @@ public class UIManager : MonoBehaviour
     public void EnableMainButton(bool state)
     {
         mainButton.SetActive(state);
+    }
+
+    public void OnOpenAndCloseAds(GameManager gameManager)
+    {
+        if (gameManager.gameplayStar || hasWatchedAd) return;
+
+        CloseAndOpenCanvas(addCanvas);
+    }
+
+    public void OnChooseToWatchAd()
+    {
+        hasWatchedAd = true;
+    }
+
+    public void ResetAdsCanvas()
+    {
+        hasWatchedAd = false;
     }
 }

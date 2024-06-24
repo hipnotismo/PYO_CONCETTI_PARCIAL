@@ -21,13 +21,15 @@ public class HighScore : MonoBehaviour
         highScoreText.text = "High Score: " + highScore.ToString("D2");
     }
 
-    public void IsHighScore(int score)
+    public bool IsHighScore(int score)
     {
         if (score > highScore)
         {
             highScore = score;
             SetHighScore();
+            return true;
         }
+        else return false;
 
     }
 

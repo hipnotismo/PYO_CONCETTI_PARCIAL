@@ -37,6 +37,11 @@ public class Timer : MonoBehaviour
         UpdateTimerText(0f);
         onEnd?.Invoke();
     }
+    public void AddSeconds(float Seconds)
+    {
+        countdown += Seconds;
+        UpdateTimerText(countdown);
+    }
 
     private void UpdateTimerText(float timer)
     {
@@ -52,4 +57,6 @@ public class Timer : MonoBehaviour
         countdown = baseCountdown;
         UpdateTimerText(countdown);
     }
+
+   
 }
