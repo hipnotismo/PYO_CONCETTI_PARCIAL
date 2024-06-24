@@ -60,7 +60,7 @@ public class RewardAds : AdsManager, IUnityAdsLoadListener, IUnityAdsShowListene
     public void OnUnityAdsShowClick(string placementId)
     {
         if (debugMode) Debug.Log("Rewarded Ad clicked successfully");
-
+        
         if (adLoaded)
             Advertisement.Show(adUnitId, this);
     }

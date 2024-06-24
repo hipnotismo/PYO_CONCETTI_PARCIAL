@@ -3205,18 +3205,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1575718429}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: OnOpenAndCloseAds
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1575718428}
-          m_ObjectArgumentAssemblyTypeName: GameManager, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 480402328}
         m_TargetAssemblyTypeName: RewardAds, Assembly-CSharp
         m_MethodName: OnUnityAdsShowClick
@@ -3224,6 +3212,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1575718429}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: OnOpenAndCloseAds
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1575718428}
+          m_ObjectArgumentAssemblyTypeName: GameManager, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4207,7 +4207,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1860928747
 RectTransform:
   m_ObjectHideFlags: 0

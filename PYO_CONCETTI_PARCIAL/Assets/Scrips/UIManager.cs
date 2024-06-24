@@ -78,17 +78,21 @@ public class UIManager : MonoBehaviour
     public void OnOpenAndCloseAds(GameManager gameManager)
     {
         if (gameManager.gameplayStar || hasWatchedAd) return;
-
+        
         CloseAndOpenCanvas(adCanvas);
     }
 
     public void OnChooseToWatchAd()
     {
         hasWatchedAd = true;
+        adButton.SetActive(false);
+
     }
 
     public void ResetAdsCanvas()
     {
         hasWatchedAd = false;
+        adButton.SetActive(true);
+
     }
 }
